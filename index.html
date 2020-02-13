@@ -1,0 +1,243 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 	<title>UI ASSIGNMENT</title>
+ 	    <link rel="stylesheet" href="https://z9t4u9f6.stackpathcdn.com/wp-content/themes/mdbootstrap4/css/compiled-4.12.0.min.css?ver=4.12.0" />
+
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+ </head>
+ <body>
+	<main>
+		<!--Main Navigation-->
+		<header>
+		  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">		   
+		    <div class="navbar-collapse d-flex" id="navbarSupportedContent">
+		      <ul class="navbar-nav mr-auto">
+		        <li class="nav-item">
+		          <a class="nav-link"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+		        </li>
+		      </ul>
+		      <ul class="navbar-nav nav-flex-icons">	       
+		        <li class="nav-item form-inline">	         
+		      	  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+		      	  <i class="fa fa-search active" aria-hidden="true"></i>      	 
+		        </li>
+		        <li class="nav-item form-inline">
+		          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+		        </li>
+		      </ul>
+		    </div>
+		  </nav>
+
+		</header>
+		<!--Main Navigation-->
+		<section class="pt-5 mt-5">
+			<div class="container m-0">
+				<div class="row">
+					<div class="col-sm-2 d-none d-sm-block">
+						<p class="font-weight-bold">Filters</p>
+						<!-- <div class="slidecontainer">
+						  <p><span>ghf</span><span>lkbhkjg</span></p>
+						  <input type="range" min="100" max="1000" value="0" class="slider" id="myRange">
+						  <p>Value: <span id="demo"></span></p>
+						</div> -->
+						<div class="d-flex justify-content-center my-4">
+						  <span class="font-weight-bold indigo-text mr-2 mt-1">100</span>
+						  <form class="range-field">
+						    <input class="border-0" id="calculatorSlider" type="range" min="100" max="1000" />
+						  </form>
+						  <span class="font-weight-bold indigo-text ml-2 mt-1">1000</span>
+						</div>
+
+
+					</div>
+					<div class="col-sm-10 col-12">
+						<div class="shopping">
+						  <!-- Title -->
+						  <div class="title">
+						    Shopping Bag
+						  </div>						 
+						  <!-- Product #1 -->
+						  <div class="item">
+						    <div class="item__image">
+						      <img src="images/computer.jpeg" alt="" />
+						    </div>
+						 
+						    <div class="description">
+						      <span>Item:</span>
+						      <span>fiction</span>
+						      <span>White</span>
+						    </div>
+						 
+						    <div class="quantity">
+						      <button class="plus-btn" type="button" name="button">
+						        <img src="images/plus.svg" alt="" />
+						      </button>
+						      <input type="text" name="name" value="1">
+						      <button class="minus-btn" type="button" name="button">
+						        <img src="images/minus.svg" alt="" />
+						      </button>
+						      <button id="button" type="button" class="btn btn-primary remove__value">Remove</button>
+						    </div>
+						 
+						  
+						  </div>
+						 
+						  <!-- Product #2 -->
+						  <div class="item">
+						    <div class="item__image">
+						      <img src="images/computer.jpeg" alt=""/>
+						    </div>
+						 
+						    <div class="description">
+						      <span>literature</span>
+						      <span>Future Sneakers</span>
+						      <span>White</span>
+						    </div>
+						 
+						    <div class="quantity">
+						      <button class="plus-btn" type="button" name="button">
+						        <img src="images/plus.svg" alt="" />
+						      </button>
+						      <input type="text" name="name" value="1">
+						      <button class="minus-btn" type="button" name="button">
+						        <img src="images/minus.svg" alt="" />
+						      </button>
+						      <button id="button" type="button" class="btn btn-primary remove__value">Remove</button>
+						    </div>						 
+						   
+						  </div>
+						 
+						  <!-- Product #3 -->
+						  <div class="item">
+						    <div class="item__image">
+						      <img src="images/computer.jpeg" alt="" />
+						    </div>
+						 
+						    <div class="description">
+						      <span>thriller</span>
+						      <span>Brushed Scarf</span>
+						      <span>Brown</span>
+						    </div>
+						 
+						    <div class="quantity">
+						      <button class="plus-btn" type="button" name="button">
+						      <img src="images/plus.svg" alt="" />
+						      </button>
+						      <input type="text" name="name" value="1">
+						      <button class="minus-btn" type="button" name="button">
+						        <img src="images/minus.svg" alt="" />
+						      </button>
+						      <button id="button" type="button" class="btn btn-primary remove__value">Remove</button>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<!-- <div class="descr">
+				
+			</div>
+ -->
+		</section>
+	</main>
+	<script src="js/jquery-2.2.4.js" charset="utf-8"></script>	
+	 <script type="text/javascript">      
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+    	$('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+    	$('.remove__value').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());	
+    		if (value > 1) {
+    			value = 0;
+    		} 
+
+        $input.val(value);
+    	});
+    	
+
+      // $('.like-btn').on('click', function() {
+      //   $(this).toggleClass('is-active');
+      // });
+    </script>
+    <script type="text/javascript">    	
+    	var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = slider.value;
+
+		slider.oninput = function() {
+		  output.innerHTML = this.value;
+		}
+    </script>
+    <script type="text/javascript">
+  //   	const div = document.createElement('div');
+  //   	const img = document.createElement('img');
+  //   	const body = document.querySelector('body');
+  //   	body.append(div);
+  //   	div.append(img);
+  //   	div.setAttribute('class', 'descr');
+		// img.setAttribute('src', 'https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2014/03/13-flat-twist-with-twist-out-2.jpg?w=500&ssl=1')
+var request = new XMLHttpRequest()
+request.open('GET', 'https://api.myjson.com/bins/qzuzi', true)
+var data = JSON.parse(this.response)
+		const buildHairstyleCard = hairstyle => {
+			
+  // Create elements needed to build a card
+  const div = document.createElement("div");
+  const h4 = document.createElement("h4");
+  const div = document.createElement("div");
+  const img = document.createElement("img");
+  // Append newly created elements into the DOM
+  const body = document.querySelector("body");
+  body.append(div);
+  h4.append(a);
+  div.append(h4);
+  div.append(img);
+  // Set content and attributes
+  a.innerHTML = hairstyle.name;
+  div.setAttribute("class", hairstyle.category);
+  img.setAttribute("src", hairstyle.img_url);
+  div.setAttribute("class", "card");
+};
+
+data.forEach(hairstyle => buildHairstyleCard(hairstyle));
+    </script>
+ </body>
+ </html>
